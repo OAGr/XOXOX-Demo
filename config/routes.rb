@@ -16,6 +16,8 @@ Xoxox::Application.routes.draw do
   get 'new2', :on => :collection
   end
   
+  match 'users/:id' => 'users#show'
+  
   match 'users/create_profile', :to => 'users#create_profile'
   
   match	'users/details',					:to => 'users#details'

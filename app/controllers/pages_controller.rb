@@ -7,9 +7,7 @@ class PagesController < ApplicationController
   end
   
   def user_page
-
     @user = current_user
-    
   end
-  
+    
 end

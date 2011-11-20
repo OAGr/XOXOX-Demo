@@ -1,12 +1,13 @@
-Create New Offer
-
+<%= @user.name%>
+</br></br>
 <%= @user.email%>
-</br>
+</br></br>
+<%= @user.bio %>
+</br></br>
 
 <% @user.offers.each do |offer| %>
-<%= link_to(offer.name, offer) %></br>
+<% if !offer.name.nil? %>
+<%= link_to offer.name, offer %>
+<% end %>
 <% end %>
 
-</br>
-
-<%= link_to "Create New Offer", new_path %>
