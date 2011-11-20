@@ -6,7 +6,6 @@ Create New Offer
 
 <% @user.offers.each do |offer| %>
 <%= link_to(offer.name, offer) %>
-<%= offer.subscriptions.count %>
 <%= link_to( 'Subscriptions', offer_subscriptions_path( offer ) ) %>
 <%= link_to( 'Edit Thanks Page', edit_thanks_offer_path(offer) ) %>
 
