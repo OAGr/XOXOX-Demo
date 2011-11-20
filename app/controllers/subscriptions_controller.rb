@@ -1,7 +1,7 @@
 class SubscriptionsController < ApplicationController
 
   def index
-    @offer = Offer.find(params[:offer_id])
+    @offer = Offer.find_by_id(params[:offer_id].to_i)
     @subscriptions = @offer.subscriptions
     respond_to do |format|
       format.html # index.html.erb
