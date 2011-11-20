@@ -1,31 +1,55 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-<div class="field">
-  <%= f.label :name  %><br />
-  <%= f.text_field :name, :value => params[:name] %>
+<div class="row">
+	<div class="offer_header"> Thank You! </div>
 </div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :value => params[:email] %></div>
+<div class="row">
+	<div class="span8">
+		<div id="offer_video">
+		<iframe src="http://player.vimeo.com/video/31982455?byline=0&amp;portrait=0" width="450" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/31982455">xoxox.biz</a> from <a href="http://vimeo.com/alexisneely">Alexis Neely</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+		</div>
+	</div>
+	<div class="span8">
+		<div class="row">
+	
+			<div class="offer_details span8"> 
+				<p style="font-size:1.1em">Awesome! You are 'THIS' close to creating your own free offer page, so you can begin building a list of people who will be hungry for your course when you are ready to offer it.
+				</p>
+				</br>
+				<p style="font-size:1.1em">Your next step is to create an avatar on the marketplace so you can build your free offer page, create your first course and start selling it online. </p> 			
+				</br></br>
+					<div class="row">
+						<div class="span2">
+							Name: </br></br>
+							Email: </br></br></br>
+							Password: </br></br>
+							Confirmation: </br> </br>
+						</div>
+						<div class="span5">
+							<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+							  <%= devise_error_messages! %>
 
+							  <%= f.text_field :name, :value => params[:name] %> </br></br>
 
-<div class="field">
-  <%= f.label :bio %><br />
-  <%= f.text_area :bio %>
+							  <%= f.email_field :email, :value => params[:email] %></br></br></br>
+
+							  <%= f.password_field :password %></br></br>
+
+							  <%= f.password_field :password_confirmation %></br></br>
+
+							  <div class=""><%= f.submit "Create Your Profile", :class => "btn large primary" %></div>
+							<% end %>
+						</div>
+					</div>
+				
+			</div>
+		
+		</div>
+	</div>
+</div>
 </div>
 
 
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
 
 

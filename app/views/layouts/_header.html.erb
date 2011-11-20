@@ -1,0 +1,25 @@
+<div id="header-background">
+	<div class="container">
+		<div id="header-title"><%= link_to "XOXOX", root_path %></div>
+		
+		      <ul id="header_nav">
+		        <li><%= link_to "How it Works", '#' %></li>
+		        <li><%= link_to "FAQ", '#' %></li>
+		      
+		
+			<% if user_signed_in?%>
+			  <li class="mega">
+			  <%= link_to('Edit User', edit_user_registration_path, :class => "mega-link") %>        
+			  </li>
+			  <li class="mega">
+			  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "mega-link") %>        
+			  </li>
+			<% else  %>
+			  <li class="mega">
+			  <%= link_to('Sign In', new_user_session_path, :class => "mega-link") %>        
+			  </li>
+			<% end %>
+			</ul>
+			
+	</div>
+</div>

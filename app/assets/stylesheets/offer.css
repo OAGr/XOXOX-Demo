@@ -1,0 +1,24 @@
+.offer_header{
+ font-size:2.5em;
+	font-weight:bold;
+	text-align:center;
+	line-height:1.2em;
+	padding:0.5em;
+	margin-bottom:1em;
+
+}
+
+.offer_details{
+
+}
+
+.offer_details p{
+font-size:1.3em;
+line-height:1.4em;
+
+
+}
+
+#offer_bullets{
+margin-top:2em;
+}

@@ -1,0 +1,57 @@
+/* @override http://localhost:3000/assets/header.css?body=1 */
+
+
+#header-background {
+	height:35px;
+	margin-top:15px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom:7px;
+}
+
+#header-title a{
+font-size:2em;
+float:left;
+text-decoration: none;
+
+}
+
+#header-title a:hover{
+background:white;
+color:black;
+}
+
+#header_nav{
+float:right;
+list-style-type:none;
+float:bottom;
+border-radius:0.4em 0.4em 0 0;
+
+}
+
+#header_nav li{
+	float: left;
+	margin-left: 0.8em;
+	margin-right: 0.8em;	
+	padding-top:0.5em;
+	font-size: 1.15em;
+
+}
+
+#header_nav li a{
+
+	font-weight: bold;
+	shadow:0.5em;
+	text-shadow: white 0.1em 0.1em 0.2em;
+}
+
+#header_nav li a:hover{
+	background:white;
+	color:black;
+	text-shadow: none;
+	text-decoration: none;
+
+}
+
+#header_search{
+margin-left:21px;
+}

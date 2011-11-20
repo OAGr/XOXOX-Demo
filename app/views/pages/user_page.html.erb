@@ -1,34 +1,42 @@
-Create New Offer
+<div class="row">
+	<div class="offer_header"> Create Landing Pages </div>
+</div>
 
-<%= @user.email%>
 
+<%= link_to "Create New Offer With Video", offers_new1_path, :class => "btn large success" %>
+<%= link_to "Create New Offer Without Video", offers_new2_path,  :class => "btn large success" %>
+
+</br></br>
 </br>
-
-<% @user.offers.each do |offer| %>
-<%= link_to(offer.name, offer) %>
-<%= link_to( 'Subscriptions', offer_subscriptions_path(offer) ) %>
-<%= link_to( 'Edit Thanks Page', edit_thanks_offer_path(offer) ) %>
-
-<%= link_to 'Edit', edit_offer_path(offer) %>
-<%= link_to 'Destroy', offer, confirm: 'Are you sure?', method: :delete %>
+<table>
+	<thead>
+		<tr> 
+			<th> Offer </th>
+			<th> Edit Offer Page </th>
+			<th> Edit Offer Thanks Page </th>
+			<th> Subscribers </th>
+			<th> Subscribers Info </th>
+			<th> Destroy </th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @user.offers.each do |offer| %>
+		
+		<tr> 
+			<th> <%= link_to(offer.name, offer) %> </th>
+			<th> <%= link_to 'Edit Show', edit_offer_path(offer) %> </th>
+			<th> <%= link_to( 'Edit Thanks', edit_thanks_offer_path(offer) ) %></th>
+			
+			<th> <%=  link_to( 'Subscriptions', offer_subscriptions_path(offer) ) %>  </th>
+			<th> <%= link_to 'Destroy', offer, confirm: 'Are you sure?', method: :delete %>
+			 </th>
+		</tr>
+		<% end %>
+	</tbody>
+</table>		
+			
 
 <br>
 
-<% end %>
-
 </br>
 
-<%= link_to "Create New Offer With Video", offers_new1_path %>
-<%= link_to "Create New Offer Without Video", offers_new2_path %>
-
-<% if user_signed_in?%>
-
-  <li class="mega">
-  <%= link_to('Edit Information', edit_user_registration_path, :class => "mega-link") %>        
-  </li>
-
-  <li class="mega">
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "mega-link") %>        
-  </li>
-
-<% end %>
