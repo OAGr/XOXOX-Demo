@@ -32,15 +32,14 @@ class SubscriptionsController < ApplicationController
     end
   end
 
-
   # POST /offers
   # POST /offers.json
   def create
-    @unit = Offer.find(params[:offer_id])
-    @subscription = @unit.subscriptions.create(params[:subscription])
+    @offer = Offer.find(params[:offer_id])
+    @subscription = @offer.subscriptions.create(params[:subscription])
     respond_to do |format|
       if @subscription.save
-        format.html { redirect_to root_path, notice: 'Offer was successfully created.' }
+        format.html { redirect_to thanks_offer_path(@offer), notice: 'Offer was successfully created.' }
         format.json { render json: @offer, status: :created, location: @offer }
       else
         format.html { render action: "new" }

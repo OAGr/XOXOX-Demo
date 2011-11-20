@@ -45,7 +45,16 @@ class OffersController < ApplicationController
   def edit
     @offer = Offer.find(params[:id])
   end
-
+  
+  # GET /offers/1/edit_thanks
+  def edit_thanks
+    @offer = Offer.find(params[:id])
+  end
+  
+  def thanks
+    @offer = Offer.find(params[:id])
+  end
+  
   # POST /offers
   # POST /offers.json
   def create
@@ -54,7 +63,7 @@ class OffersController < ApplicationController
     @user = current_user
     respond_to do |format|
       if @offer.save
-        format.html { redirect_to user_root_path, notice: 'Offer was successfully created.' }
+        format.html { redirect_to edit_thanks_offer_path(@offer), notice: 'Offer was successfully created.' }
         format.json { render json: @offer, status: :created, location: @offer }
       else
         format.html { render action: "new" }

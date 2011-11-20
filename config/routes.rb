@@ -12,9 +12,14 @@ Xoxox::Application.routes.draw do
   end
 
   resources :offers do 
-    resources :subscriptions
   get 'new1', :on => :collection
   get 'new2', :on => :collection
+    member do
+      get 'edit_thanks'
+      get 'thanks'
+    end
+    resources :subscriptions 
+    
   end
   
   match 'users/:id' => 'users#show'
@@ -23,7 +28,6 @@ Xoxox::Application.routes.draw do
   
   match	'users/details',					:to => 'users#details'
   
- 
   match	'offers/new2',					:to => 'offers#new_video'
   match	'offers/new1',					:to => 'offers#new'
   

@@ -10,7 +10,8 @@ gem 'sqlite3'
 gem 'devise'
 
 gem 'formtastic'
-
+gem 'carrierwave'
+gem 'fog'
 gem 'omniauth'
 
 gem 'omniauth-twitter'
