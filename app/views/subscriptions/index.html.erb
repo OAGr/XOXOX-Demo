@@ -1,0 +1,15 @@
+<%= @offer.name  %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+
+<% @subscriptions.each do |subscription| %>
+  <tr>
+    <td><%= subscription.name %></td>
+    <td><%= subscription.email %></td>
+
+<% end %>
+</table>

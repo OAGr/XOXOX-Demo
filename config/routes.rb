@@ -12,6 +12,7 @@ Xoxox::Application.routes.draw do
   end
 
   resources :offers do 
+    resources :subscriptions
   get 'new1', :on => :collection
   get 'new2', :on => :collection
   end
