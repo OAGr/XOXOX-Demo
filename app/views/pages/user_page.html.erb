@@ -15,16 +15,15 @@ Create New Offer
 
 </br>
 
-<%= link_to "Create New Offer", new_path %>
+<%= link_to "Create New Offer With Video", offers_new1_path %>
+<%= link_to "Create New Offer Without Video", offers_new2_path %>
 
 <% if user_signed_in?%>
 
   <li class="mega">
-  <%= link_to('Edit Password', edit_user_registration_path, :class => "mega-link") %>        
+  <%= link_to('Edit Information', edit_user_registration_path, :class => "mega-link") %>        
   </li>
-  <li class="mega">
-  <%= link_to('Edit Information', users_create_profile_path, :method => :delete, :class => "mega-link") %>        
-  </li>
+
   <li class="mega">
   <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "mega-link") %>        
   </li>

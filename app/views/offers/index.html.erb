@@ -4,9 +4,6 @@
   <tr>
     <th>Name</th>
     <th>Video url</th>
-    <th>Bullet1</th>
-    <th>Bullet2</th>
-    <th>Bullet3</th>
     <th>User</th>
     <th></th>
     <th></th>
@@ -15,13 +12,13 @@
 
 <% @offers.each do |offer| %>
   <tr>
-    <td><%= offer.name %></td>
+    <td><%= link_to offer.name, offer %></td>
     <td><%= offer.video_url %></td>
-    <td><%= offer.bullet1 %></td>
-    <td><%= offer.bullet2 %></td>
-    <td><%= offer.bullet3 %></td>
-    <td><%= offer.user %></td>
 
+    <td>
+<% if !offer.user.nil? %>
+<%= offer.user.name %></td>
+<% end %>
     <td><%= link_to 'Show', offer %></td>
     <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
     <td><%= link_to 'Destroy', offer, confirm: 'Are you sure?', method: :delete %></td>
