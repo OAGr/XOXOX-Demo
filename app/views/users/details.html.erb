@@ -1,0 +1,10 @@
+<% if user_signed_in?%>
+<div style="float:right">
+  <li class="mega">
+  <%= link_to('Edit User', edit_user_registration_path, :class => "mega-link") %>        
+  </li>
+  <li class="mega">
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "mega-link") %>        
+  </li>
+</div>
+<% end %>

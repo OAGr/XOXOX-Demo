@@ -1,0 +1,17 @@
+
+Name: <input type="text" name="name" id="name"/>
+Email Address: <input type="text" name="email" id="email" />
+<div id="button"> Enter </div>
+
+<script>
+	
+$("#button").click( function(){
+	name = $("#name").val();
+	email = $("#email").val();
+	current_doc = document.URL;
+	
+	window.location.replace(document.URL + "users/sign_up/" + "?name=" + name + "&email=" + email )
+});
+
+		</script>
+

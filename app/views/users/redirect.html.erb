@@ -1,0 +1,14 @@
+Create New Offer
+
+<%= @user.email%>
+</br>
+
+<% @user.offers.each do |offer| %>
+<%= link_to(offer.name, offer) %></br>
+<%= offer.user.email %></br>
+
+<% end %>
+
+</br>
+
+<%= link_to "Create New Offer", new_path %>

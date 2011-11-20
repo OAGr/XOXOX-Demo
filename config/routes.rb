@@ -1,4 +1,33 @@
 Xoxox::Application.routes.draw do
+  
+  match '/auth/:provider/callback' => 'authentications#create'
+  
+  resources :authentications
+
+  root :to => 'pages#home'
+  
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do
+    get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session
+    get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
+  end
+
+  resources :offers do 
+  get 'new1', :on => :collection
+  get 'new2', :on => :collection
+  end
+  
+  match 'users/create_profile', :to => 'users#create_profile'
+  
+  match	'users/details',					:to => 'users#details'
+  
+ 
+  match	'offers/new2',					:to => 'offers#new_video'
+  match	'offers/new1',					:to => 'offers#new'
+  
+  match 'user_root' => 'pages#user_page'
+  
+  match 'user_page' => 'pages#user_page'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

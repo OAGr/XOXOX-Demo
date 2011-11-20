@@ -1,0 +1,32 @@
+Create New Offer
+
+<%= @user.email%>
+
+</br>
+
+<% @user.offers.each do |offer| %>
+<%= link_to(offer.name, offer) %>
+<%= link_to 'Edit', edit_offer_path(offer) %>
+<%= link_to 'Destroy', offer, confirm: 'Are you sure?', method: :delete %>
+
+<br>
+
+<% end %>
+
+</br>
+
+<%= link_to "Create New Offer", new_path %>
+
+<% if user_signed_in?%>
+
+  <li class="mega">
+  <%= link_to('Edit Password', edit_user_registration_path, :class => "mega-link") %>        
+  </li>
+  <li class="mega">
+  <%= link_to('Edit Information', users_create_profile_path, :method => :delete, :class => "mega-link") %>        
+  </li>
+  <li class="mega">
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "mega-link") %>        
+  </li>
+
+<% end %>
