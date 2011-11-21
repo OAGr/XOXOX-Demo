@@ -14,8 +14,9 @@
 			<th> Offer </th>
 			<th> Edit Offer Page </th>
 			<th> Edit Offer Thanks Page </th>
-			<th> Subscribers Info </th>
-			<th> Destroy </th>
+			<th> Subscribers </th>
+			<th> Mailing List </th>
+			<th> Delete </th>
 		</tr>
 	</thead>
 	<tbody>
@@ -25,9 +26,9 @@
 			<th> <%= link_to(offer.name, offer) %> </th>
 			<th> <%= link_to 'Edit Show', edit_offer_path(offer) %> </th>
 			<th> <%= link_to( 'Edit Thanks', edit_thanks_offer_path(offer) ) %></th>
-			
-			<th> <%=  link_to( 'Subscriptions', offer_subscriptions_path(offer) ) %>  </th>
-			<th> <%= link_to 'Destroy', offer, confirm: 'Are you sure?', method: :delete %>
+			<th> <%= offer.subscriptions.count %></th>
+			<th> <%=  link_to(  "Subscribers", offer_subscriptions_path(offer) ) %>  </th>
+			<th> <%= link_to 'Delete', offer, confirm: 'Are you sure?', method: :delete %>
 			 </th>
 		</tr>
 		<% end %>
