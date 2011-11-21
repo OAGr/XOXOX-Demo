@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111120214729) do
+ActiveRecord::Schema.define(:version => 20111121010013) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20111120214729) do
     t.string   "thanks_video"
     t.string   "thanks_audio"
     t.text     "thanks_text"
+    t.text     "description"
+    t.string   "button"
   end
 
   create_table "subscriptions", :force => true do |t|

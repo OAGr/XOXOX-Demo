@@ -1,0 +1,72 @@
+
+<%= form_for @offer, :html => {:multipart => true} do |f| %>
+  <% if @offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
+
+      <ul>
+      <% @offer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+<div class="row">
+	<div class="offer_header"> <%= f.text_field :name, :class => "offer_header" %> </div>
+</div>
+
+<div class="row">
+	<div class="span8">
+		<div id="offer_video">
+			<%= f.text_field :video_url %>
+		</div>
+	</div>
+	<div class="span8">
+		<div class="row">
+	
+			<div class="offer_details span7"> 
+				<p> Join now to easily and effortlessly start delivering your content online and getting paid without learning how to become an internet marketing master or going through another course you will never implement. </p> 			
+				</br></br>
+					<div class="row">
+						<div class="span2">
+							Name: </br></br>
+							Email Address: </br> </br>
+						</div>
+						<div class="span5">
+							<input type="text" name="name" id="name"/> </br></br>
+							<input type="text" name="email" id="email" />
+							</br></br>
+							<a class="btn large primary" href="#" id="offer_button">Sign Me Up!</a> 
+							
+						</div>
+					</div>
+				
+			</div>
+			<div class="span1">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row" id="offer_bullets">
+	<div class="span5 offer_bullet">
+		<p><%= f.text_field :bullet1 %></p>
+	</div>
+	<div class="span5 offer_bullet">
+		<p><%= f.text_field :bullet2 %></p>
+	</div>
+	<div class="span5 offer_buller">
+		<p><%= f.text_field :bullet3 %></p>
+	</div>
+</div>
+</div>
+
+ <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

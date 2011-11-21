@@ -21,7 +21,7 @@
 		<div class="row">
 	
 			<div class="offer_details span7"> 
-				<p> Join now to easily and effortlessly start delivering your content online and getting paid without learning how to become an internet marketing master or going through another course you will never implement. </p> 			
+				<p> <%= @offer.description  %></p> 			
 				</br></br>
 					<div class="row">
 						<div class="span2">
@@ -37,7 +37,7 @@
 							  <%= f.text_field :name %></br></br>
 
 							  <%= f.text_field :email %> </br></br>
-							<div class=""><%= f.submit "Sign Me Up!", :class => "btn large primary" %></div>
+							<div class=""><%= f.submit @offer.button , :class => "btn large primary" %></div>
 							<% end %>
 						</div>
 						
