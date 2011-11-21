@@ -1,44 +1,56 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @offer.name %>
-</p>
-
-
-  <b>Video url:</b>
-  <%= @offer.video_url %>
-</p>
-
-<p>
-  <b>Bullet1:</b>
-  <%= @offer.bullet1 %>
-</p>
-
-<p>
-  <b>Bullet2:</b>
-  <%= @offer.bullet2 %>
-</p>
-
-<p>
-  <b>Bullet3:</b>
-  <%= @offer.bullet3 %>
-</p>
-<p>
-  <b>Bullet3:</b>
-
-</p>
-
-<%= form_for [@offer, @offer.subscriptions.build] do |f| %>
-<div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name %>
+<div class="row">
+	<div class="offer_header"> <%= @offer.name %>
+   </div>
 </div>
-<div class="field">
-  <%= f.label :email %><br />
-  <%= f.text_field :email %>
+
+<div class="row">
+	<div class="span8 offer-bullets-horizontal" >
+		<ul>
+		<li>
+			<%= @offer.bullet1 %>
+		</li>
+		<li>
+			<%= @offer.bullet2 %>
+		</li>
+		<li>
+			<%= @offer.bullet3 %>
+		</li>
+		</ul>
+	</div>
+	<div class="span8">
+		<div class="row">
+	
+			<div class="offer_details span7"> 
+				<p> Join now to easily and effortlessly start delivering your content online and getting paid without learning how to become an internet marketing master or going through another course you will never implement. </p> 			
+				</br></br>
+					<div class="row">
+						<div class="span2">
+							Name: </br></br>
+							Email Address: </br> </br>
+						</div>
+						
+						
+				
+						<div class="span5">
+							<%= form_for [@offer, @offer.subscriptions.build] do |f| %>
+
+							  <%= f.text_field :name %></br></br>
+
+							  <%= f.text_field :email %> </br></br>
+							<div class=""><%= f.submit "Sign Me Up!", :class => "btn large primary" %></div>
+							<% end %>
+						</div>
+						
+					</div>
+				
+			</div>
+			<div class="span1">
+			</div>
+		</div>
+	</div>
 </div>
-<div class="actions">
-  <%= f.submit %>
 </div>
-<% end %>
+
+
+
+

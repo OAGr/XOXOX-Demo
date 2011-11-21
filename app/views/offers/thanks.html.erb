@@ -1,6 +1,35 @@
-<h2> <%= @offer.name %> </h2>
-<%= @offer.thanks_text %></br>
 </br>
-	<%= @offer.thanks_video %></br>
-	<%= @offer.thanks_audio %></br>
 	
+	<div class="row">
+		<div class="offer_header"> Thank You! </div>
+	</div>
+
+	<div class="row">
+		<div class="span8 offer_details ">
+			<p><%= @offer.thanks_text %></br> </p>
+			
+		</div>
+		<div class="span8">
+			<div class="row">
+
+				<div class="offer_details span8"> 
+					<div class="span8 offer-bullets-horizontal" >
+						<ul>
+						<li>
+							<%= @offer.bullet1 %>
+						</li>
+						<li>
+							<%= @offer.bullet2 %>
+						</li>
+						<li>
+							<%= @offer.bullet3 %>
+						</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	</div>
