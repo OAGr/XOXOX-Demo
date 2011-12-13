@@ -18,7 +18,8 @@ gem 'heroku'
 
 gem 'devise'
 
-gem 'formtastic'
+gem 'activeadmin'
+
 gem 'carrierwave'
 gem 'fog'
 gem 'omniauth'
