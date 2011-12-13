@@ -40,7 +40,7 @@ group :assets do
 end
 
 
-gem "activeadmin", :git => 'git://github.com/gregbell/active_admin.git'
+gem "activeadmin"
   gem "meta_search",    '>= 1.1.0.pre'
   gem 'sass-rails',     "~> 3.1.0.rc"
 
