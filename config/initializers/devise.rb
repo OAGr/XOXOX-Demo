@@ -7,7 +7,7 @@ Devise.setup do |config|
   config.mailer_sender = "help@xoxox.biz"
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = "Devise::Mailer"
+   config.mailer = "Devise::Mailer"
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -208,8 +208,4 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
   
-  config.omniauth :facebook, "APP_ID", "APP_SECRET"
-  
-  config.omniauth :facebook, "APP_ID", "APP_SECRET",
-        {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
 end
