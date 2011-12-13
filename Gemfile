@@ -19,6 +19,7 @@ gem 'heroku'
 
 gem 'devise'
 
+
 gem 'carrierwave'
 gem 'fog'
 gem 'omniauth'
@@ -37,6 +38,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
 
 gem "activeadmin", :git => 'git://github.com/gregbell/active_admin.git'
   gem "meta_search",    '>= 1.1.0.pre'
