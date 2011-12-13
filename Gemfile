@@ -16,9 +16,11 @@ gem 'therubyracer'
 
 gem 'heroku'
 
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
+
 gem 'devise'
 
-gem 'formtastic'
 gem 'carrierwave'
 gem 'fog'
 gem 'omniauth'
