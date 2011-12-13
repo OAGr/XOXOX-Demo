@@ -16,8 +16,6 @@ gem 'therubyracer'
 
 gem 'heroku'
 
-gem 'activeadmin'
-gem "meta_search",    '>= 1.1.0.pre'
 
 gem 'devise'
 
@@ -40,8 +38,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-  gem 'sass-rails',   '~> 3.1.4'
+gem "activeadmin", :git => 'git://github.com/gregbell/active_admin.git'
+  gem "meta_search",    '>= 1.1.0.pre'
+  gem 'sass-rails',     "~> 3.1.0.rc"
 
+  gem 'formtastic'
 
 gem 'jquery-rails'
 
