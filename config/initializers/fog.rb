@@ -1,8 +1,8 @@
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',       # required
-    :aws_access_key_id      => 'AKIAJLVS4YQQ4Z4J3TMA',       # required
-    :aws_secret_access_key  => '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',       # required
+    :aws_access_key_id      => AWS_ACCESS_KEY    # required
+    :aws_secret_access_key  => AWS_SECRET_ACCESS_KEY       # required
     :region                 => 'eu-west-1'  # optional, defaults to 'us-east-1'
   }
   config.fog_directory  = 'aws_downloads'                     # required
